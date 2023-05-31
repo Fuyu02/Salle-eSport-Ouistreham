@@ -4,6 +4,7 @@
     <head>
         <title> Pavillon eSport</title>
         <link rel="stylesheet" href="page css.css" type="text/css"/>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
         <script type="text/javascript" src="page js.js"></script>
         <script type="text/php" src="page php.php" ></script>
         <meta name="author" content=" Ophélie NOEL">
@@ -15,7 +16,7 @@
     <nav class="menu">
             <form method="post" action="page php.php"></form>
             <a href="Site_pavillon_eSport.php"></a>
-                <img src="logo-ORB-quadri.jpg"><!--bandeau avec image (en trouver une autre) et faire redirection vers le site de la mairie de ousitreham -->
+                <img src="logo-ORB-quadri.png"><!--bandeau avec image (en trouver une autre) et faire redirection vers le site de la mairie de ousitreham -->
                 <!--menu déroulant faire en sorte même hauter que l'image -->
             </a>
             <ul>
@@ -49,6 +50,9 @@
         <div>
             </br>
             <h4>Uniquement sur inscription</h4>
+        </div>
+
+        <div id="Agenda">
         </div>
 
     </body>
