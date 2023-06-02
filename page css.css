@@ -1,13 +1,15 @@
 /*Style Page d'accueil*/
 
-html{
+header{
+    color: white;
+}
+
+body{
     /*faire un dégradé de couleur*/
     /*color: #bbc6dc;*/
     background-color: #bdd4e7;
     background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
-
 }
-
 
 
 
@@ -94,40 +96,37 @@ nav > ul li:hover .sous{
 }
 /**/
 
+/*Boutons de l'accueil à revoir*/
 .button {
+    background-color: orange;
     border: none;
     color: white;
-    padding: 16px 32px;
+    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    border-radius: 12px;
+    -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
-    cursor: pointer;
-  }
+}
 
-  .BtnPresentation {
-    background-color: white; 
-    color: black; 
-    border: 2px solid #4CAF50;
-  }
-
-  .BtnPresentation:hover {
-    background-color: #4CAF50;
+.button:hover {
+    background-color: orange;
     color: white;
-  }
+}
 
-  .BtnHo-In{
-    background-color: white; 
-    color: black; 
-    border: 2px solid #4CAF50;
-  }
-  .BtnHo-In:hover{
-    background-color: #4CAF50;
-    color: white;
-  }
 
+
+
+
+
+/**/
+/*IMAGE ACCUEIL*/
+.imgAcc{
+    position: absolute;
+    display: inline-block;
+}
 
 
 
@@ -172,17 +171,31 @@ footer {
 
 /**/
 /*PARTIE FOOTER DE LA PAGE*/
+/*On veut aligner et ne pas faire en escalier*/
 
+a{
+    text-decoration: none;/*Pour que le lien ne soit plus "souligné"...*/
+    color: orange; /*ça reste un exemple*/
+}
 
 footer{
     background-color: white;
     color:black;
+    position:relative;
 }
 
-/*Pour la carte gooogle map*/
-iframe{
-    position: absolute; /*faire en sorte que ça se mette à droite*/
+#liensUtiles{
+    text-align: left;
+    color:orange;
 }
+#ContactFooter{
+    text-align: center;
+}
+#map{
+    text-align: right;
+}
+
+/**/
 
 
 
@@ -203,5 +216,26 @@ iframe{
 }
 
 
+/*Page Horaire Inscription*/
 
+#InformationOuverture{
+    text-align: left;
+}
+
+#Calendrier{
+    text-align: right;
+}
+
+/**/
+
+
+/*Page Nous contacter*/
+
+#HoraireCentreSocio{
+    text-align: left;
+}
+
+#TelEmailCentreSocio{
+    text-align: right;
+}
 
