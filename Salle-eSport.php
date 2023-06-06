@@ -69,18 +69,23 @@
     </body>
 
     <footer>
-        <!-- bas de page classique de site web -->
-        <div>
+       <!-- bas de page classique de site web -->
+       <div>
             <div id="liensUtiles">
                 <a href="Salle-eSport.php">Présentation</a> <br><br>
                 <a href="Horaire-Inscription.php">Horaire & Inscription</a> <br><br>
+                <h4 style="color:orange;">Nous suivre :</h4>
+                <a href="https://www.facebook.com/lepavillonorb/"><img src="facebookicone.png" style="width:30px;height:30px"/></a>
+                <a href="https://twitter.com/OuistrehamRB"><img src="twittericone.png" style="width:30px;height:30px"/></a>
+                <a href="https://www.youtube.com/channel/UCicu38EACvQ1byF7T2Lzk4A"><img src="youtubeicone.png" style="width:30px;height:30px"/></a>
+                <a href="https://www.instagram.com/ouistrehamrb/"><img src="instagramicone.png" style="width:30px;height:30px"/></a>
             </div>
         
              <div id="ContactFooter">
-                <h4 id="contact">Nous contacter:</h4><br/>
-                11 Rue des Arts, 14150 Ouistreham <br/>
-                02 31 25 51 60 </br>
-                 accueil.csc@ville-ouistreham.fr <br/> 
+                <h4 id="contact" style="color:orange;">Nous contacter:</h4><br/>
+                <img src="localisationicone.png" style="width:20px;height:20px"/> Rue des Arts, 14150 Ouistreham <br/>
+                <img src="telephoneicone.png" style="width:20px;height:20px"/> 02 31 25 51 60 </br>
+                <img src="mailicone.png" style="width:20px;height:20px"/>accueil.csc@ville-ouistreham.fr <br/> 
             </div>
             
             <div id="map">
