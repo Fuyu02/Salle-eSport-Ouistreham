@@ -3,7 +3,7 @@
     
     <head>
         <title> Pavillon eSport</title>
-        <link rel="stylesheet" href="pagecss.css" type="text/css"/>
+        <link rel="stylesheet" href="PageAccueilCss.css" type="text/css"/>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <script type="text/javascript" src="pagejs.js"></script>
         <meta name="author" content=" Ophélie NOEL">
@@ -45,8 +45,12 @@
         <section id="slider">
             <div id=imgAcc style="text-align: center;">
                 <img src="img1.jpg" alt="slider" id="ImageAccueil"/>
-                <button id="BtnPresentation" type="button" onclick="ClickPresentation()">Présentation</button>
-                <button id="BtnHo-In" type="button"onclick="ClickHoIn()">Horaire & Inscription</button>
+            <div class="wrapper">
+                <span class="button" onclick="ClickPresentation()">Présentation</span>
+                <span class="button" onclick="ClickHoIn()">Horaire & Inscription</span>
+            </div>
+                <!-- <button id="BtnAccueil" type="button" onclick="ClickPresentation()">Présentation</button>
+                <button id="BtnAccueil" type="button"onclick="ClickHoIn()">Horaire & Inscription</button>-->
             </div>
             <br/>
             <br/>
