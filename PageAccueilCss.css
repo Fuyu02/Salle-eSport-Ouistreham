@@ -156,6 +156,33 @@ nav > ul li:hover .sous{
 }
 /**/
 
+/*2ème IMAGE ACCUEIL*/
+
+.hero {
+    position: relative;
+    height: auto;
+    width: auto; /* Ajustez la largeur selon vos besoins */
+    
+  }
+
+  .transparent {
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+    
+  }
+
+  .TxtImageAccueil {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+  }
+/**/
+
 
 
 /**/

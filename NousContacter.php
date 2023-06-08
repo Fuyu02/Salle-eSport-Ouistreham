@@ -34,10 +34,10 @@
 
 
     <body>
-        <div> 
             <br>
             <br>
-            <br>   
+            <br>
+            <div>   
                 <div id="HoraireCentreSocio">
                     Centre socioculturel de Ouistreham:<br>
                     Du Lundi au Vendredi: 9h-12h / 13h30-18h30 <br>
@@ -47,13 +47,14 @@
                 </div id="TelEmailCentreSocio">
                     Télphone: 02 31 25 51 60 <br>
                 e   mail : csc@ville-ouistreham.fr <br>
-                <div>  
-        </div>
+                <div>
+            </div>
 
         <div id="formulaire"> <!-- le mettre à droite -->
             <br>
             <br>
             <br> 
+            <div class="wrapper">
             <form action="" method="post"> <!-- mettre page php dans action, enlever les chiffres dans les inputs nom et prénom -->
                 <div>
                 <label for="nom"> Nom : </label>
@@ -67,14 +68,15 @@
                 </div> <br>
                 <div>
                 <label for="email"> Email : </label>
-                <input type="text" name="email" id="email">
-                <!-- required pattern="^[A-Za-z]+@{1}[A-Za-z]+\.{1}[A-Za-z]{2,}$"> -->
+                <input type="text" name="email" id="email"
+                        required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$">
                 </div> <br>
                 <div>
                 <label for="message">Message : </label>
-                <input type="text" name="message" id="message">  <!-- faire un input plus grand pour le message -->
+                <textarea cols="30" rows="10" name="message" id="message"></textarea>  <!-- faire un input plus grand pour le message -->
                 </div> <br>
-                <input type=submit value="Envoyer">
+                <button><span class="button" type="submit" value="Envoyer" onclick="ClickFormulaire()">Envoyer</span></button>
+            </div>
             </form>
             <br>
             <br>

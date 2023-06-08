@@ -56,24 +56,19 @@
             <br/>
             <br/>
             <br/>
-            <div>
-                <div id=Texteimg2Accueil>
-                    <img src="img3.jpg"/>
+            <div class="hero">
+                <img class="transparent" src="img3.jpg"/>
+                <div class="TxtImageAccueil">
                     <h1>L'esport à porté de clavier</h1>
                 </div>
-            </div>
         </section>
         </div>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
     </body>
    
     <footer>
         <!-- bas de page classique de site web -->
         <main id="colonnefooter">
-            <div id="divfooter">
+            <div id="wrapper">
                 <div id="colonne1">
                     <a href="Salle-eSport.php">Présentation</a> <br><br>
                     <a href="Horaire-Inscription.php">Horaire & Inscription</a> <br><br>

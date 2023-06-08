@@ -15,3 +15,6 @@ function ClickHoIn() {
 
 
 
+function ClickFormulaire(){ /*L'alerte box ne s'affiche pas */
+  alert("Formulaire envoyé");
+}
