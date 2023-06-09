@@ -72,6 +72,15 @@
                         required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$">
                 </div> <br>
                 <div>
+                    <label for="selection">Objet du message:</label>   
+                    <select name="objetMessage" id="objetMessage">
+                        <option value="">--Please choose an option--</option>
+                        <option value="sinscrire">S'inscrire à la salle esport</option>
+                        <option value="infosalle">Information sur l'activité</option>
+                        <option value="autre">Autre demande</option>
+                    </select>
+                </div>
+                <div>
                 <label for="message">Message : </label>
                 <textarea cols="30" rows="10" name="message" id="message"></textarea>  <!-- faire un input plus grand pour le message -->
                 </div> <br>

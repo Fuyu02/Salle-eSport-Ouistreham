@@ -149,7 +149,7 @@ nav > ul li:hover .sous{
 
 
 /**/
-/*IMAGE ACCUEIL*/
+/*IMAGE ACCUEIL
 .imgAcc{
     position: absolute;
     display: inline-block;
@@ -168,7 +168,7 @@ nav > ul li:hover .sous{
   .transparent {
     width: 100%;
     height: auto;
-    opacity: 0.5;
+    opacity: 0.4;
     
   }
 

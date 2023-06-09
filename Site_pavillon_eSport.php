@@ -42,15 +42,13 @@
         <br/>
         <br/>
         <div id="contentAccueil">
-        <section id="slider">
-            <div id=imgAcc style="text-align: center;">
-                <img src="img1.jpg" alt="slider" id="ImageAccueil"/>
-            <div class="wrapper">
+        <section class="hero">
+            <div id=imgAcc>
+                <img src="img1.jpg" alt="slider" class="transparent" id="ImageAccueil"/>
+                <div >
                 <span class="button" onclick="ClickPresentation()">Présentation</span>
                 <span class="button" onclick="ClickHoIn()">Horaire & Inscription</span>
-            </div>
-                <!-- <button id="BtnAccueil" type="button" onclick="ClickPresentation()">Présentation</button>
-                <button id="BtnAccueil" type="button"onclick="ClickHoIn()">Horaire & Inscription</button>-->
+                </div>
             </div>
             <br/>
             <br/>
@@ -60,7 +58,7 @@
                 <img class="transparent" src="img3.jpg"/>
                 <div class="TxtImageAccueil">
                     <h1>L'esport à porté de clavier</h1>
-                </div>
+            </div>
         </section>
         </div>
     </body>
