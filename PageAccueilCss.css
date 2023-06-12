@@ -99,7 +99,7 @@ nav > ul li:hover .sous{
 
 
 
-/*Boutons de l'accueil à revoir*/
+/*BOUTONS ACCUEIL*/
 .wrapper {
   margin: 80px auto;
   text-align: center;
@@ -227,4 +227,37 @@ footer{
 
 /**/
 
+/*BANNIERE COOOKIE*/
 
+.banniere{
+    border:solid 4 px black;
+    background: orange;
+    /* Pour qu'il soit fixé en bas de la page même en scrollant*/
+    position: fixed;
+    bottom:0;
+    left: 0;
+    width:100%;
+    /**/
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding:30 px;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.text-banniere p{
+    font-size: large;
+
+}
+
+.button-banniere{
+    padding-top:15 px;
+}
+.button-banniere a{
+    border: solid 1 px white;
+    padding: 10 px;
+    background:#bdd4e7;
+    border-radius: 7px;
+    color: white;
+    text-decoration: none; /*enlève le lien surligné*/
+}

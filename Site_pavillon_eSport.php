@@ -1,3 +1,13 @@
+<?php
+    if(isset($_GET['accepte-cookie'])){
+        setcookie('accepte-cookie','true',time()+365*24*3600);
+        header('Location: Site_pavillon_eSport.php'); //on peut faire plutot un script js pour enlever le bandeau
+        die(); //pour finir le script
+    }
+    
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
     
@@ -88,8 +98,24 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10412.115093748775!2d-0.2625332!3d49.275852!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a66a9b31e0a9f%3A0x50a7fb6f4b8cb9d3!2sLe%20Pavillon%20de%20Ouistreham%20Riva-Bella!5e0!3m2!1sfr!2sfr!4v1684946837964!5m2!1sfr!2sfr" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-        </main>
+        </main>                
     </footer>
-
+    
+    
+    <?php
+        if(!isset($_COOKIE['accepte-cookie'])){
+    ?> <!-- Tout ce qui est entre crochet dépend de la condition-->
+        <div class="banniere">
+            <div class="text-banniere">
+                <p> Notre site utilise des cookies pour une meilleure expérience</p>
+            </div>
+            <div class="button-banniere"> <!-- Méthode get pour ce cookie-->
+                <a href="?accepte-cookie"> Ok, J'accepte </a>
+            </div>
+        </div>
+    <?php
+        }
+    ?>
+    
    
 </html>
