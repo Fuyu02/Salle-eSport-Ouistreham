@@ -37,56 +37,62 @@
             <br>
             <br>
             <br>
-            <div>   
-                <div id="HoraireCentreSocio">
+        <div class ='colonne' id="info">   
+            <div id="HoraireCentreSocio">
                     Centre socioculturel de Ouistreham:<br>
                     Du Lundi au Vendredi: 9h-12h / 13h30-18h30 <br>
                     Le Samedi : 9h-13h30 <br>
                     Fermé le dimanche<br>
-                 </div>
-                </div id="TelEmailCentreSocio">
-                    Télphone: 02 31 25 51 60 <br>
-                e   mail : csc@ville-ouistreham.fr <br>
-                <div>
             </div>
+            <br>
+            <br>
+            </div id="TelEmailCentreSocio">
+                    Télphone: 02 31 25 51 60 <br>
+                email : csc@ville-ouistreham.fr <br>
+            <div>
+        </div>
 
-        <div id="formulaire"> <!-- le mettre à droite -->
+        <div class="colonne" id="formulaire"> <!-- le mettre à droite -->
             <br>
             <br>
             <br> 
             <div class="wrapper">
-            <form action="" method="post"> <!-- mettre page php dans action, enlever les chiffres dans les inputs nom et prénom -->
-                <div>
-                <label for="nom"> Nom : </label>
-                <input type="text" id="nom" name="nom"
+                <form action="" method="post"> <!-- mettre page php dans action, enlever les chiffres dans les inputs nom et prénom -->
+                    <div>
+                    <label for="nom"> Nom : </label>
+                    <input type="text" id="nom" name="nom"
                         required pattern="^[A-Za-z '-]+$" maxlength="20">
-                </div> <br>
-                <div>
-                <label for="prenom"> Prenom : </label>
-                <input type="text" name="prenom" id="prenom"
+                    </div> <br>
+                    <div>
+                    <label for="prenom"> Prenom : </label>
+                    <input type="text" name="prenom" id="prenom"
                         required pattern="^[A-Za-z '-]+$" maxlength="20">
-                </div> <br>
-                <div>
-                <label for="email"> Email : </label>
-                <input type="text" name="email" id="email"
+                    </div> <br>
+                    <div>
+                    <label for="email"> Email : </label>
+                    <input type="text" name="email" id="email"
                         required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$">
-                </div> <br>
-                <div>
-                    <label for="selection">Objet du message:</label>   
-                    <select name="objetMessage" id="objetMessage">
-                        <option value="">--Please choose an option--</option>
-                        <option value="sinscrire">S'inscrire à la salle esport</option>
-                        <option value="infosalle">Information sur l'activité</option>
-                        <option value="autre">Autre demande</option>
-                    </select>
-                </div>
-                <div>
-                <label for="message">Message : </label>
-                <textarea cols="30" rows="10" name="message" id="message"></textarea>  <!-- faire un input plus grand pour le message -->
-                </div> <br>
-                <button><span class="button" type="submit" value="Envoyer" onclick="ClickFormulaire()">Envoyer</span></button>
+                    </div> <br>
+                    <div>
+                        <label for="selection">Objet du message:</label>   
+                        <select name="objetMessage" id="objetMessage">
+                            <option value="">--Please choose an option--</option>
+                            <option value="sinscrire">S'inscrire à la salle esport</option>
+                            <option value="infosalle">Information sur l'activité</option>
+                            <option value="autre">Autre demande</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message">Message : </label>
+                        <textarea cols="30" rows="10" name="message" id="message" required></textarea>  <!-- faire un input plus grand pour le message -->
+                    </div> <br>
+                    <div>
+                        <label for="fichier">Fichier :</label>
+                        <input type="file" name="fichier" id="fichier"><br><br>
+                    </div>
+                    <button><span class="button" type="submit" value="Envoyer" onclick="ClickFormulaire()">Envoyer</span></button>
+                </form>
             </div>
-            </form>
             <br>
             <br>
             <br>
@@ -96,7 +102,7 @@
 
     <footer>
         <!-- bas de page classique de site web -->
-        <div class="colonnefooter">
+        <div class="colonnefooter" >
                 <div id="colonne1">
                     <a href="Salle-eSport.php">Présentation</a> <br><br>
                     <a href="Horaire-Inscription.php">Horaire & Inscription</a> <br><br>

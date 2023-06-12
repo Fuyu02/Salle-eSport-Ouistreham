@@ -103,6 +103,12 @@ nav > ul li:hover .sous{
     text-align: right;
 }
 
+.colonne{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
 
 .wrapper{
     display:grid;

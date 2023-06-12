@@ -78,6 +78,7 @@
    
     <footer>
         <!-- bas de page classique de site web -->
+        <br>
         <div class="colonnefooter">
                 <div id="colonne1">
                     <a href="Salle-eSport.php">Présentation</a> <br><br>
