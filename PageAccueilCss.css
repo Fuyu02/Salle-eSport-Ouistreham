@@ -200,18 +200,11 @@ footer{
     position:relative;
 }
 
-#colonnefooter{
-    content: "";
-    display: table;
-    clear: both;
+.colonnefooter{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px; /* Espacement entre les colonnes */
 
-}
-
-#divfooter{
-    float: left;
-    height: 470px;
-    width: 23%;
-    padding: 0 10px;
 }
 
 #colonne1{

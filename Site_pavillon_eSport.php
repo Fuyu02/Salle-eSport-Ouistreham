@@ -18,6 +18,9 @@
         <script type="text/javascript" src="pagejs.js"></script>
         <meta name="author" content=" Ophélie NOEL">
         <meta charset="utf-8"/>
+        <!-- idéal à avoir
+        <script type="text/javascript" src="//cookie.eurowebpage.com/cookie.js?skin=cookielaw3&amp;box_radius=23&amp;position=bottom_right&amp;delay=4&amp;accept_background=f86e00"></script>
+        -->
     </head>
 
 
@@ -75,8 +78,7 @@
    
     <footer>
         <!-- bas de page classique de site web -->
-        <main id="colonnefooter">
-            <div id="wrapper">
+        <div class="colonnefooter">
                 <div id="colonne1">
                     <a href="Salle-eSport.php">Présentation</a> <br><br>
                     <a href="Horaire-Inscription.php">Horaire & Inscription</a> <br><br>
@@ -97,12 +99,11 @@
                 <div id="map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10412.115093748775!2d-0.2625332!3d49.275852!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a66a9b31e0a9f%3A0x50a7fb6f4b8cb9d3!2sLe%20Pavillon%20de%20Ouistreham%20Riva-Bella!5e0!3m2!1sfr!2sfr!4v1684946837964!5m2!1sfr!2sfr" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-            </div>
-        </main>                
+        </div>                
     </footer>
     
-    
-    <?php
+    <!-- BANNIERE COOKIE-->
+     <?php
         if(!isset($_COOKIE['accepte-cookie'])){
     ?> <!-- Tout ce qui est entre crochet dépend de la condition-->
         <div class="banniere">
@@ -116,6 +117,6 @@
     <?php
         }
     ?>
-    
+   
    
 </html>
