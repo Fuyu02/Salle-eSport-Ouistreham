@@ -4,16 +4,25 @@
     <head>
         <title> Pavillon eSport</title>
         <link rel="stylesheet" href="HoraireInscriptionCss.css" type="text/css"/>
+        <link rel="stylesheet" href="GeneralCss.css" type="text/css"/>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <script type="text/javascript" src="pagejs.js"></script>
         <meta name="author" content=" Ophélie NOEL">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
         <meta charset="utf-8"/>
+        <!-- Pour les cookies du site et cookie consent pour le css et le visuel global -->
+        <script type="text/javascript" src="//cookie.eurowebpage.com/cookie.js?skin=cookielaw3&amp;box_radius=23&amp;position=bottom_right&amp;delay=4&amp;accept_background=f86e00"></script>
     </head>
 
 
     <header>
     <nav class="menu">
         <a href="Site_pavillon_eSport.php" alt="Logo Mairie de Ouistreham"><img src="logo-ORB-quadri.png"/></a>
+        <div class="connexion">
+            <button type="button" id="login-button" class="" onclick="ClickLogin()">Se connecter</button>
+        </div>
             <form method="post" action="page php.php"></form>
             <!--bandeau avec image (en trouver une autre) et faire redirection vers le site de la mairie de ousitreham -->
             <!--menu déroulant faire en sorte même hauter que l'image -->
@@ -71,7 +80,7 @@
         
                 <div id="colonne2">
                     <h4 id="contact" style="color:orange;">Nous contacter:</h4><br/>
-                    <img src="localisationicone.png" style="width:20px;height:20px"/> Rue des Arts, 14150 Ouistreham <br/>
+                    <img src="localisationicone.png" style="width:20px;height:20px"/>11 Rue des Arts, 14150 Ouistreham <br/>
                     <img src="telephoneicone.png" style="width:20px;height:20px"/> 02 31 25 51 60 </br>
                     <img src="mailicone.png" style="width:20px;height:20px"/>accueil.csc@ville-ouistreham.fr <br/> 
                 </div>

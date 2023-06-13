@@ -14,7 +14,6 @@ function ClickHoIn() {
   }
 
 
-
-/*function ClickFormulaire(){ /*L'alerte box ne s'affiche pas comme il faut 
-  alert("Formulaire envoyé");
-}*/
+function ClickLogin(){
+  window.location.href ="LoginPage.php";
+}

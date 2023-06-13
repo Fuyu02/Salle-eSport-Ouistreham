@@ -4,18 +4,26 @@
     <head>
         <title> Pavillon eSport</title>
         <link rel="stylesheet" href="ContacterCss.css" type="text/css"/>
+        <link rel="stylesheet" href="GeneralCss.css" type="text/css"/>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <script type="text/javascript" src="pagejs.js"></script>
         <script type="text/php" src="pagephp.php" ></script>
         <meta name="author" content=" Ophélie NOEL">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
         <meta charset="utf-8"/>
+        <!-- Pour les cookies du site et cookie consent pour le css et le visuel global -->
+        <script type="text/javascript" src="//cookie.eurowebpage.com/cookie.js?skin=cookielaw3&amp;box_radius=23&amp;position=bottom_right&amp;delay=4&amp;accept_background=f86e00"></script>
     </head>
 
 
     <header>
     <nav class="menu">
         <a href="Site_pavillon_eSport.php" alt="Logo Mairie de Ouistreham"><img src="logo-ORB-quadri.png"/></a>
-            
+        <div class="connexion">
+            <button type="button" id="login-button" class="" onclick="ClickLogin()">Se connecter</button>
+        </div>
             <!--bandeau avec image (en trouver une autre) et faire redirection vers le site de la mairie de ousitreham -->
             <!--menu déroulant faire en sorte même hauter que l'image -->
             
@@ -26,7 +34,7 @@
                         <li> <a href="Articles.php">Actualité</a> </li>
                     </ul>
                 </li>
-                <li> <a href="Horaire-Inscription.php">Horaire et inscription</a></li>
+                <li> <a href="Horaire-Inscription.php">Horaire et Inscription</a></li>
                 <li> <a href="NousContacter.php">Nous Contacter</a></li>
             </ul>
         </nav> 
@@ -34,69 +42,48 @@
 
 
     <body>
-            <br>
-            <br>
-            <br>
-        <div class ='colonne' id="info">   
-            <div id="HoraireCentreSocio">
-                    Centre socioculturel de Ouistreham:<br>
-                    Du Lundi au Vendredi: 9h-12h / 13h30-18h30 <br>
-                    Le Samedi : 9h-13h30 <br>
-                    Fermé le dimanche<br>
-            </div>
-            <br>
-            <br>
-            </div id="TelEmailCentreSocio">
-                    Télphone: 02 31 25 51 60 <br>
-                email : csc@ville-ouistreham.fr <br>
-            <div>
-        </div>
 
-        <div class="colonne" id="formulaire"> <!-- le mettre à droite -->
-            <br>
-            <br>
-            <br> 
-            <div class="wrapper">
-                <form action="" method="post"> <!-- mettre page php dans action, enlever les chiffres dans les inputs nom et prénom -->
-                    <div>
-                    <label for="nom"> Nom : </label>
-                    <input type="text" id="nom" name="nom"
-                        required pattern="^[A-Za-z '-]+$" maxlength="20">
-                    </div> <br>
-                    <div>
-                    <label for="prenom"> Prenom : </label>
-                    <input type="text" name="prenom" id="prenom"
-                        required pattern="^[A-Za-z '-]+$" maxlength="20">
-                    </div> <br>
-                    <div>
-                    <label for="email"> Email : </label>
-                    <input type="text" name="email" id="email"
-                        required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$">
-                    </div> <br>
-                    <div>
-                        <label for="selection">Objet du message:</label>   
-                        <select name="objetMessage" id="objetMessage">
-                            <option value="">--Please choose an option--</option>
-                            <option value="sinscrire">S'inscrire à la salle esport</option>
-                            <option value="infosalle">Information sur l'activité</option>
-                            <option value="autre">Autre demande</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="message">Message : </label>
-                        <textarea cols="30" rows="10" name="message" id="message" required></textarea>  <!-- faire un input plus grand pour le message -->
-                    </div> <br>
-                    <div>
-                        <label for="fichier">Fichier :</label>
-                        <input type="file" name="fichier" id="fichier"><br><br>
-                    </div>
-                    <button><span class="button" type="submit" value="Envoyer" onclick="ClickFormulaire()">Envoyer</span></button>
-                </form>
+
+            
+    <link href="contact-form.css" rel="stylesheet">
+
+    <div class="fcf-body">
+
+        <div id="fcf-form">
+        <h3 class="fcf-h3">Envoyer un message</h3>
+
+        <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+        
+            <div class="fcf-form-group">
+                <label for="Name" class="fcf-label">Prénom & Nom</label>
+                <div class="fcf-input-group">
+                    <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                </div>
             </div>
-            <br>
-            <br>
-            <br>
-        </div>
+
+            <div class="fcf-form-group">
+                <label for="Email" class="fcf-label">Adresse email</label>
+                <div class="fcf-input-group">
+                    <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                </div>
+            </div>
+
+            <div class="fcf-form-group">
+                <label for="Message" class="fcf-label">Votre message</label>
+                <div class="fcf-input-group">
+                    <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                </div>
+            </div>
+
+            <div class="fcf-form-group">
+                <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Envoyer</button>
+            </div>
+
+
+        </form>
+    </div>
+
+</div>
     </body>
 
 
@@ -115,14 +102,13 @@
         
                 <div id="colonne2">
                     <h4 id="contact" style="color:orange;">Nous contacter:</h4><br/>
-                    <img src="localisationicone.png" style="width:20px;height:20px"/> Rue des Arts, 14150 Ouistreham <br/>
+                    <img src="localisationicone.png" style="width:20px;height:20px"/>11 Rue des Arts, 14150 Ouistreham <br/>
                     <img src="telephoneicone.png" style="width:20px;height:20px"/> 02 31 25 51 60 </br>
                     <img src="mailicone.png" style="width:20px;height:20px"/>accueil.csc@ville-ouistreham.fr <br/> 
                 </div>
             
                 <div id="map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10412.115093748775!2d-0.2625332!3d49.275852!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480a66a9b31e0a9f%3A0x50a7fb6f4b8cb9d3!2sLe%20Pavillon%20de%20Ouistreham%20Riva-Bella!5e0!3m2!1sfr!2sfr!4v1684946837964!5m2!1sfr!2sfr" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-        </div>                
+                </div>           
     </footer>
 </html>

@@ -1,11 +1,3 @@
-<?php
-    if(isset($_GET['accepte-cookie'])){
-        setcookie('accepte-cookie','true',time()+365*24*3600);
-        header('Location: Site_pavillon_eSport.php'); //on peut faire plutot un script js pour enlever le bandeau
-        die(); //pour finir le script
-    }
-    
-?>
 
 
 <!DOCTYPE html>
@@ -14,13 +6,17 @@
     <head>
         <title> Pavillon eSport</title>
         <link rel="stylesheet" href="PageAccueilCss.css" type="text/css"/>
+        <link rel="stylesheet" href="GeneralCss.css" type="text/css"/>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <script type="text/javascript" src="pagejs.js"></script>
         <meta name="author" content=" Ophélie NOEL">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
         <meta charset="utf-8"/>
-        <!-- idéal à avoir
+        <!-- Pour les cookies du site et cookie consent pour le css et le visuel global -->
         <script type="text/javascript" src="//cookie.eurowebpage.com/cookie.js?skin=cookielaw3&amp;box_radius=23&amp;position=bottom_right&amp;delay=4&amp;accept_background=f86e00"></script>
-        -->
+        
     </head>
 
 
@@ -29,7 +25,9 @@
             
             <nav class="menu">
                 <a href="Site_pavillon_eSport.php" alt="Logo Mairie de Ouistreham"><img src="logo-ORB-quadri.png"/></a>
-                <form method="post" action="page php.php"></form>
+                <div class="connexion">
+                <button type="button" id="login-button" class="" onclick="ClickLogin()">Se connecter</button>
+                </div>
             <!--bandeau avec image (en trouver une autre) et faire redirection vers le site de la mairie de ousitreham -->
             <!--menu déroulant faire en sorte même hauter que l'image -->
             
@@ -67,11 +65,6 @@
             <br/>
             <br/>
             <br/>
-            <div class="hero">
-                <img class="transparent" src="img3.jpg"/>
-                <div class="TxtImageAccueil">
-                    <h1>L'esport à porté de clavier</h1>
-            </div>
         </section>
         </div>
     </body>
@@ -92,7 +85,7 @@
         
                 <div id="colonne2">
                     <h4 id="contact" style="color:orange;">Nous contacter:</h4><br/>
-                    <img src="localisationicone.png" style="width:20px;height:20px"/> Rue des Arts, 14150 Ouistreham <br/>
+                    <img src="localisationicone.png" style="width:20px;height:20px"/>11 Rue des Arts, 14150 Ouistreham <br/>
                     <img src="telephoneicone.png" style="width:20px;height:20px"/> 02 31 25 51 60 </br>
                     <img src="mailicone.png" style="width:20px;height:20px"/>accueil.csc@ville-ouistreham.fr <br/> 
                 </div>
@@ -103,21 +96,6 @@
         </div>                
     </footer>
     
-    <!-- BANNIERE COOKIE-->
-     <?php
-        if(!isset($_COOKIE['accepte-cookie'])){
-    ?> <!-- Tout ce qui est entre crochet dépend de la condition-->
-        <div class="banniere">
-            <div class="text-banniere">
-                <p> Notre site utilise des cookies pour une meilleure expérience</p>
-            </div>
-            <div class="button-banniere"> <!-- Méthode get pour ce cookie-->
-                <a href="?accepte-cookie"> Ok, J'accepte </a>
-            </div>
-        </div>
-    <?php
-        }
-    ?>
    
    
 </html>
