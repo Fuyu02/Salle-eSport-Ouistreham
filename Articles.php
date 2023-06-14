@@ -71,7 +71,9 @@
                     <h4 id="contact" style="color:orange;">Nous contacter:</h4><br/>
                     <img src="localisationicone.png" style="width:20px;height:20px"/>11 Rue des Arts, 14150 Ouistreham <br/>
                     <img src="telephoneicone.png" style="width:20px;height:20px"/> 02 31 25 51 60 </br>
-                    <img src="mailicone.png" style="width:20px;height:20px"/>accueil.csc@ville-ouistreham.fr <br/> 
+                    <img src="mailicone.png" style="width:20px;height:20px"/>accueil.csc@ville-ouistreham.fr <br/>
+                    <img src="horaireouverture.png" style="width:20px;height:20px"/> Mardi-Jeudi-Vendredi : 13h30-19h30 <br/>
+                    Mercredi-Samedi : 9h30-12h30/13h30-19h30
                 </div>
             
                 <div id="map">

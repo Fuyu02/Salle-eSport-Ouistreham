@@ -73,7 +73,8 @@
             <p>À terme, c’est une salle de 40 m² qui accueillera cet équipement complété par deux consoles de jeux vidéo permettant à huit joueurs de jouer. </br>
             L’espace permettra aussi d’accueillir des spectateurs, et favorisera l’émulation, l’échange et la sociabilisation entre les pratiquants.</br>
             Et d'autres jeux seront rajoutés au fur et à mesure.</br></p>
-        </div>  
+        </div>
+        <br/>  
     </body>
 
     <footer>
@@ -93,7 +94,9 @@
                     <h4 id="contact" style="color:orange;">Nous contacter:</h4><br/>
                     <img src="localisationicone.png" style="width:20px;height:20px"/>11 Rue des Arts, 14150 Ouistreham <br/>
                     <img src="telephoneicone.png" style="width:20px;height:20px"/> 02 31 25 51 60 </br>
-                    <img src="mailicone.png" style="width:20px;height:20px"/>accueil.csc@ville-ouistreham.fr <br/> 
+                    <img src="mailicone.png" style="width:20px;height:20px"/>accueil.csc@ville-ouistreham.fr <br/>
+                    <img src="horaireouverture.png" style="width:20px;height:20px"/> Mardi-Jeudi-Vendredi : 13h30-19h30 <br/>
+                    Mercredi-Samedi : 9h30-12h30/13h30-19h30 
                 </div>
             
                 <div id="map">

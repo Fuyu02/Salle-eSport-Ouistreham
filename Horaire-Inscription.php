@@ -8,10 +8,16 @@
         <link rel="icon" type="image/x-icon" href="favicon.ico">
         <script type="text/javascript" src="pagejs.js"></script>
         <meta name="author" content=" Ophélie NOEL">
+        <meta charset="utf-8"/>
+        <!-- Pour le calendrier -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="Calendrier/css/style.css">
+         <!-- Pour la police d'écriture -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
-        <meta charset="utf-8"/>
         <!-- Pour les cookies du site et cookie consent pour le css et le visuel global -->
         <script type="text/javascript" src="//cookie.eurowebpage.com/cookie.js?skin=cookielaw3&amp;box_radius=23&amp;position=bottom_right&amp;delay=4&amp;accept_background=f86e00"></script>
     </head>
@@ -42,10 +48,8 @@
 
 
     <body>
-    <!--intégration google image pour montrer les disponibilité ou classique en écrit -->
-        
-        <div>    
-            <div id="InformationOuverture">
+    <!--intégration google image pour montrer les disponibilité ou classique en écrit -->    
+        <div id="InformationOuverture">
                 </br>
                 </br>
                 <h4>Horaire:</h4></br>
@@ -56,14 +60,117 @@
                 16h-18h Accès +15 ans</br>
                 </br>
                 <h4>Uniquement sur inscription</h4>
-                <h4>Sur place ou par téléphone</h4>
+                <h4>Sur place, par téléphone et dans l'onglet "Nous contacter"</h4>
             </div>
+        <section class="ftco-section">
+		    <div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Calendrier</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="elegant-calencar d-md-flex">
+						<div class="wrap-header d-flex align-items-center img" style="background-image: url(Calendrier/images/bg.jpg);">
+				      <p id="reset">Today</p>
+			        <div id="header" class="p-0">
+								<!-- <div class="pre-button d-flex align-items-center justify-content-center"><i class="fa fa-chevron-left"></i></div> -->
+		            <div class="head-info">
+		            	<div class="head-month"></div>
+		                <div class="head-day"></div>
+		            </div>
+		            <!-- <div class="next-button d-flex align-items-center justify-content-center"><i class="fa fa-chevron-right"></i></div> -->
+			        </div>
+			      </div>
+			      <div class="calendar-wrap">
+			      	<div class="w-100 button-wrap">
+				      	<div class="pre-button d-flex align-items-center justify-content-center"><i class="fa fa-chevron-left"></i></div>
+				      	<div class="next-button d-flex align-items-center justify-content-center"><i class="fa fa-chevron-right"></i></div>
+			      	</div>
+			        <table id="calendar">
+		            <thead>
+		                <tr>
+	                    <th>Sun</th>
+	                    <th>Mon</th>
+	                    <th>Tue</th>
+	                    <th>Wed</th>
+	                    <th>Thu</th>
+	                    <th>Fri</th>
+	                    <th>Sat</th>
+		                </tr>
+		            </thead>
+		            <tbody>
+	                <tr>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                </tr>
+	                <tr>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                </tr>
+	                <tr>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                </tr>
+	                <tr>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                </tr>
+	                <tr>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                </tr>
+	                <tr>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                  <td></td>
+	                </tr>
+		            </tbody>
+			        </table>
+			      </div>
+			    </div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-            <div id="Calendrier">
-                <iframe name="InlineFrame1" id="InlineFrame1" style="width:690px;height:235px;text-align: left;" src="https://www.mathieuweb.fr/calendrier/calendrier-des-semaines.php?nb_mois=1&nb_mois_ligne=4&mois=0&an=0&langue=fr&texte_color=B9CBDD&week_color=DAE9F8&week_end_color=C7DAED&police_color=453413&sel=true" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
-            </div>
-        </div>
+	<script src="Calendrier/js/jquery.min.js"></script>
+    <script src="Calendrier/js/popper.js"></script>
+    <script src="Calendrier/js/bootstrap.min.js"></script>
+    <script src="Calendrier/js/main.js"></script>
     </body>
+
+
 
     <footer>
         <!-- bas de page classique de site web -->
@@ -82,7 +189,9 @@
                     <h4 id="contact" style="color:orange;">Nous contacter:</h4><br/>
                     <img src="localisationicone.png" style="width:20px;height:20px"/>11 Rue des Arts, 14150 Ouistreham <br/>
                     <img src="telephoneicone.png" style="width:20px;height:20px"/> 02 31 25 51 60 </br>
-                    <img src="mailicone.png" style="width:20px;height:20px"/>accueil.csc@ville-ouistreham.fr <br/> 
+                    <img src="mailicone.png" style="width:20px;height:20px"/>accueil.csc@ville-ouistreham.fr <br/>
+                    <img src="horaireouverture.png" style="width:20px;height:20px"/> Mardi-Jeudi-Vendredi : 13h30-19h30 <br/>
+                    Mercredi-Samedi : 9h30-12h30/13h30-19h30 
                 </div>
             
                 <div id="map">
