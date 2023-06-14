@@ -2,7 +2,7 @@
             $serveur = "localhost";
             $dbname = "formulairedonnees";
             $user = "root";
-            $pass = "root";
+            $pass = "";
     
             $nom = valid_donnees($_POST["nom"]);
             $prenom = valid_donnees($_POST["prenom"]);

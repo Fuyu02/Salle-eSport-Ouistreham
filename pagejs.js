@@ -15,7 +15,7 @@ function ClickHoIn() {
 
 
 function ClickLogin(){
-  window.location.href ="LoginPage.php";
+  window.location.href ="LoginPage/login.php";
 }
 
 /**/
