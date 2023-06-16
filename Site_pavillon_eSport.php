@@ -25,11 +25,10 @@
             <nav class="menu">
                 <a href="Site_pavillon_eSport.php" alt="Logo Mairie de Ouistreham"><img src="images/logo-ORB-quadri.png"/></a>
                 <div class="connexion">
-                <button type="button" id="login-button" class="" onclick="ClickLogin()">Se connecter</button>
+                <button type="button" id="login-button" class="boutonlogin" onclick="ClickLogin()">Se connecter</button>
                 </div>
             <!--bandeau avec image (en trouver une autre) et faire redirection vers le site de la mairie de ousitreham -->
             <!--menu déroulant faire en sorte même hauter que l'image -->
-            
             <!--utilisation de liste -->
                 <ul>
                     <li class="mderoulant"> <a href="">Présentation</a>

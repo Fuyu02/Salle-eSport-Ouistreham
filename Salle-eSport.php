@@ -22,7 +22,7 @@
     <nav class="menu">
         <a href="Site_pavillon_eSport.php" alt="Logo Mairie de Ouistreham"><img src="images/logo-ORB-quadri.png"/></a>
         <div class="connexion">
-            <button type="button" id="login-button" class="" onclick="ClickLogin()">Se connecter</button>
+            <button type="button" id="login-button" class="boutonlogin" onclick="ClickLogin()">Se connecter</button>
         </div>
             <!--bandeau avec image (en trouver une autre) et faire redirection vers le site lui même -->
             <!--menu déroulant faire en sorte même hauteur que l'image -->
