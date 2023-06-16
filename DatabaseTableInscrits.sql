@@ -1,0 +1,13 @@
+CREATE DATABASE dbinscrits;
+
+USE dbinscrits;
+
+CREATE TABLE inscrits (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    Nom VARCHAR(50) NOT NULL,
+    Prénom VARCHAR(50) NOT NULL,
+    Age INT(3) NOT NULL,
+    Groupe VARCHAR(10) NOT NULL,
+    Peut jouer PEGI 16 BOOLEAN() NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+);
