@@ -41,3 +41,81 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/**/
+
+
+/* Style du bouton d'ajout */
+.add-button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+/* Style du bouton d'ajout au survol */
+        .add-button:hover {
+            background-color: #0056b3;
+        }
+
+/* Style du formulaire d'ajout */
+        .add-form {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .add-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .add-form input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .add-form button[type="submit"] {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .add-form button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+/* Style du bouton de modification */
+.edit-button {
+    padding: 6px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+/* Style du bouton de modification au survol */
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+  

@@ -1,5 +1,24 @@
+
+<?php
+//// IL FAUT ETABLIR UNE CONNEXION POUR AJOUTER DANS LA TABLE
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "dbinscrit";
+
+// Créez une connexion
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Vérifiez la connexion
+if ($conn->connect_error) {
+    die("La connexion a échoué : " . $conn->connect_error);
+}
+?>
+
+
 <?php
 // Récupérez les données du formulaire
+$id=$_POST["id"];
 $Nom = $_POST["Nom"];
 $Prenom = $_POST["Prenom"];
 $Age = $_POST["Age"];
@@ -8,7 +27,7 @@ $Groupe = $_POST["Groupe"];
 $PeutJouerPEGI16 = $_POST["PeutJouerPEGI16"];
 
 // Insérez les données dans la table
-$sql = "INSERT INTO inscrit (Nom ,Prenom ,Age ,Email ,Groupe ,PeutJouerPEGI16) VALUES ('$Nom', '$Prenom','$Email','$Groupe','$$PeutJouerPEGI16')";
+$sql = "INSERT INTO inscrits (Nom ,Prenom ,Age ,Email ,Groupe ,PeutJouerPEGI16) VALUES ('$Nom', '$Prenom','$Email','$Groupe','$PeutJouerPEGI16')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Nouvel enregistrement créé avec succès.";
