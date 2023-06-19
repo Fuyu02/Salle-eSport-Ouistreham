@@ -102,6 +102,7 @@ if ($conn->connect_error) {
             echo "<td>" . $row["Groupe"] . "</td>";
             echo "<td>" . $row["PeutJouerPEGI16"] . "</td>";
             echo "<td><button class='edit-button' onclick='editData(" . $row["id"] . ")'>Modifier</button></td>";
+            echo "<td><button class='delete-button' onclick='confirmDelete(" . $row["id"] . ")'>Supprimer</button></td>";
             echo "</tr>";
         }
     } 

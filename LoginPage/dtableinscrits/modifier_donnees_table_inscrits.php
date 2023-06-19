@@ -1,8 +1,8 @@
 <?php
 // Vérifier si l'ID est passé en paramètre
-if (isset($_GET['id'])){
+if (isset($_POST['id'])){
     // Récupérer l'ID de la ligne à modifier
-    $id = $_GET['id'];
+    $id = $_POST['id'];
 
 
     // Vérifier si le formulaire de modification a été soumis
@@ -12,7 +12,7 @@ if (isset($_GET['id'])){
     $nouveauNom = $_POST["Nom"];
     $nouveauPrenom= $_POST["Prenom"];
     $nouveauAge=$_POST["Age"];
-    $nouvelEmail = $_POST["Email"];
+    //$nouvelEmail= $_POST["Email"]; //ERREUR ICI CLE DE TABLEAU NON DEFINIE
     $nouveauGroupe=$_POST["Groupe"];
     $nouveauPeutJouerPEGI16=$_POST["PeutJouerPEGI16"];
 
@@ -31,11 +31,11 @@ if (isset($_GET['id'])){
     }
 
     // Préparer la requête de modification
-    $sql = "UPDATE inscrits SET Nom='?',Prenom='?',Age='?', Email='$?',Groupe='?',PeutJouerPEGI16='?', WHERE id=?";
+    $sql = "UPDATE inscrits SET Nom='?',Prenom='?',Age='?', Email='?',Groupe='?',PeutJouerPEGI16='?', WHERE id=?";
     
     // Préparer et exécuter la requête préparée
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssi", $nouveauNom,$nouveauPrenom,$nouveauAge, $nouvelEmail,$nouveauGroupe,$nouveauPeutJouerPEGI16, $id);
+    $stmt->bind_param("ssssssi", $nouveauNom,$nouveauPrenom,$nouveauAge, $nouvelEmail,$nouveauGroupe,$nouveauPeutJouerPEGI16, $id);
     $stmt->execute();
 
     // Vérifier si la modification a réussi
@@ -76,7 +76,7 @@ if (isset($_GET['id'])){
     $stmt->execute();
 
     // Récupérer les résultats de la requête
-    $stmt->bind_result($Nom,$Prenom, $Age,$Email,$Groupe,$PeutJouerPEGI16,);
+    $stmt->bind_result($Nom,$Prenom, $Age,$Email,$Groupe,$PeutJouerPEGI16);
     $stmt->fetch();
 
     // Fermer la requête et la connexion à la base de données
@@ -148,14 +148,31 @@ if (isset($_GET['id'])){
     <h2>Modifier les données</h2>
 
     <form method="POST">         <!-- PROBLEME Essayer d'accéder à l'offset du tableau sur une valeur de type null -->
+
+        <label for="id">id :</label>
         <input type="text" name="id" value="<?php echo $id; ?>">
-        <input type="text" name="Nom" value="<?php echo $Nom; ?>">
-        <input type="text" name="Prenom" value="<?php echo $Prenom; ?>">
+
+        <label for="Nom">Nom :</label>
+        <input type="text" name="Nom" id="Nom" value="<?php echo $Nom; ?>">
+
+        <label for="Prenom">Prenom :</label>
+        <input type="text" name="Prenom" id="Prenom" value="<?php echo $Prenom; ?>">
+
+        <label for="Age">Age :</label>
         <input type="text" name="Age" value="<?php echo $Age; ?>">
-        <input type="text" name="Email" value="<?php echo $Email; ?>">
+
+        <label for="Email">Email :</label>
+        <input type="text" name="Email" id="Email" value="<?php echo $Email; ?>">
+
+        <label for="Groupe">Groupe :</label>
         <input type="text" name="Groupe" value="<?php echo $Groupe; ?>">
+
+        <label for="PeutJouerPEGI16">Peut jouer à des jeux PEGI 16 :</label>
         <input type="text" name="PeutJouerPEGI16" value="<?php echo $PeutJouerPEGI16; ?>">
+
         <button type="submit">Modifier</button>
+
+
     </form>
 </body>
 
