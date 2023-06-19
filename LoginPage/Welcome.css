@@ -1,0 +1,43 @@
+body{ font: 14px sans-serif; text-align: center; }
+
+ /* Style de la table */
+ table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Style de l'en-tête de la table */
+thead {
+    background-color: #f9f9f9;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Style des lignes impaires de la table */
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* Style des liens dans la table */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Style des liens au survol */
+a:hover {
+    text-decoration: underline;
+}
