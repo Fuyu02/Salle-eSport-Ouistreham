@@ -30,20 +30,22 @@ if ($conn->connect_error) {
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" -->
     <link rel="stylesheet" href="Welcome.css">
 </head>
 <body>
-    <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
-    <p>
+
+<div class="sidebar">
+        <a href="#" class="active">Accueil</a>
         <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
         <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
-    </p>
+    </div>
+
+    <div class="content">
+    <h1 class="my-5">Bonjour, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
 
 
     <h2>Liste des inscrits</h2>
-
-
 
     <button class="add-button">Ajouter</button>
 
@@ -69,18 +71,18 @@ if ($conn->connect_error) {
     </div>
 
 
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nom</th>
-            <th>Prenom</th>
-            <th>Age</th>
-            <th>Email</th>
-            <th>Groupe</th>
-            <th>Peut jouer jeux PEGI 16</th>
-        </tr>
-    </thead>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Groupe</th>
+                <th>Peut jouer jeux PEGI 16</th>
+            </tr>
+        </thead>
     
     <tbody>
     <?php
@@ -114,7 +116,8 @@ if ($conn->connect_error) {
     $conn->close();
     ?>
     </tbody>
-</table>
+    </table>
+    </div>
 
 <script type="text/javascript" src="jswelcome.js"></script>
 

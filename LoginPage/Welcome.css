@@ -133,3 +133,34 @@ a:hover {
     background-color: #ff0000;
 }
   
+
+/**/
+/*POur le menu sur le coté*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    background-color: #333;
+    color: #fff;
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+}
+
+.sidebar a {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar a.active {
+    background-color: #555;
+}
+
+.content {
+    margin-left: 200px;
+    padding: 20px;
+}
