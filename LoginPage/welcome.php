@@ -37,8 +37,9 @@ if ($conn->connect_error) {
 
 <div class="sidebar">
         <a href="#" class="active">Accueil</a>
-        <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
-        <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
+        <a href="logout.php" class="">Se déconnecter</a>
+        <a href="reset-password.php" class="">Changer le mot de passe</a> <!-- FAIRE CONDITION VISIBLE QUE POUR ADMIN avec du js ou php-->
+        <a href="register.php" class="">Enregistrer un nouveau compte </a> <!-- FAIRE CONDITION VISIBLE QUE POUR ADMIN avec du js ou php-->
     </div>
 
     <div class="content">

@@ -20,7 +20,7 @@ function confirmDelete(id) {
     //}
 }
 
-// Ajoute la classe "active" au lien cliqué
+// Ajoute la classe "active" au lien cliqué pour le menu sur le coté
 var links = document.querySelectorAll('.sidebar a');
 links.forEach(function(link) {
     link.addEventListener('click', function() {

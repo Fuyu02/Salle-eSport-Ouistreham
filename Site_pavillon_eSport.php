@@ -45,7 +45,7 @@
     </header>
 
     <body>
-        <!--image slide (trouver image salle) avec boutons redirigeant -->
+        <!--image slide avec boutons redirigeant -->
         <br/>
         <br/>
         <br/>
