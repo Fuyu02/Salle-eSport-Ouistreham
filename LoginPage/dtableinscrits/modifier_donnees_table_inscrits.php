@@ -12,7 +12,7 @@ if (isset($_POST['id'])){
     $nouveauNom = $_POST["Nom"];
     $nouveauPrenom= $_POST["Prenom"];
     $nouveauAge=$_POST["Age"];
-    //$nouvelEmail= $_POST["Email"]; //ERREUR ICI CLE DE TABLEAU NON DEFINIE
+    $nouvelEmail= $_POST["Email"]; //ERREUR ICI CLE DE TABLEAU NON DEFINIE
     $nouveauGroupe=$_POST["Groupe"];
     $nouveauPeutJouerPEGI16=$_POST["PeutJouerPEGI16"];
 
@@ -31,11 +31,11 @@ if (isset($_POST['id'])){
     }
 
     // Préparer la requête de modification
-    $sql = "UPDATE inscrits SET Nom='?',Prenom='?',Age='?', Email='?',Groupe='?',PeutJouerPEGI16='?', WHERE id=?";
+    $sql = "UPDATE inscrits SET Nom='?',Prenom='?',Age='?', Email='?',Groupe='?',PeutJouerPEGI16='?' WHERE id=?";
     
     // Préparer et exécuter la requête préparée
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssssi", $nouveauNom,$nouveauPrenom,$nouveauAge, $nouvelEmail,$nouveauGroupe,$nouveauPeutJouerPEGI16, $id);
+    $stmt->bind_param("ssisssi", $nouveauNom,$nouveauPrenom,$nouveauAge, $nouvelEmail,$nouveauGroupe,$nouveauPeutJouerPEGI16, $id);
     $stmt->execute();
 
     // Vérifier si la modification a réussi
@@ -146,11 +146,11 @@ if (isset($_POST['id'])){
 </head>
 <body>
     <h2>Modifier les données</h2>
-
-    <form method="POST">         <!-- PROBLEME Essayer d'accéder à l'offset du tableau sur une valeur de type null -->
+<!-- PROBLEME Essayer d'accéder à l'offset du tableau sur une valeur de type null -->
+    <form method="POST">         
 
         <label for="id">id :</label>
-        <input type="text" name="id" value="<?php echo $id; ?>">
+        <input type="text" name="id" value="<?php echo $id; ?>"readonly>
 
         <label for="Nom">Nom :</label>
         <input type="text" name="Nom" id="Nom" value="<?php echo $Nom; ?>">

@@ -27,7 +27,8 @@ if (isset($_POST['id'])) {
 
         // Préparer et exécuter la requête préparée
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssssssi", $Nom,$Prenom,$Age, $Email,$Groupe,$PeutJouerPEGI16, $id); //ERREUR ICI
+        $stmt->bind_param("i", $id);
+        //$stmt->bind_param("ssssssi", $Nom,$Prenom,$Age, $Email,$Groupe,$PeutJouerPEGI16, $id); //ERREUR ICI
         $stmt->execute();
 
         // Vérifier si la suppression a réussi
