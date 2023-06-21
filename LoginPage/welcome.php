@@ -54,17 +54,6 @@ display: none;
 </style>
 
 
-
-<div class="sidebar">
-        <a href="#" class="active">Accueil</a>
-        <a href="logout.php" class="">Se déconnecter</a>
-        <?php if (estAdmin()) { ?>
-            <a href="register.php" class="admin-menu">Enregistrer un nouveau compte </a> 
-            <a href="reset-password.php" class="admin-menu">Changer le mot de passe</a>
-        <?php } ?> <!-- FAIRE CONDITION VISIBLE QUE POUR ADMIN avec du js ou php-->
-</div>
-
-
 <script>
         // Vérifier le rôle de l'utilisateur en JavaScript
         var estAdmin = <?php echo $estAdmin ? 'true' : 'false'; ?>;
@@ -76,6 +65,19 @@ display: none;
             }
         }
 </script>
+
+
+<div class="sidebar">
+        <a href="#" class="active">Accueil</a>
+        <a href="logout.php" class="">Se déconnecter</a>
+        <?php if (estAdmin()) { ?>
+            <a href="register.php" class="admin-menu">Enregistrer un nouveau compte </a> 
+            <a href="reset-password.php" class="admin-menu">Changer le mot de passe</a>
+        <?php } ?> <!-- FAIRE CONDITION VISIBLE QUE POUR ADMIN avec du js ou php-->
+</div>
+
+
+
 
     <div class="content">
     <h1 class="my-5">Bonjour, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
