@@ -1,13 +1,21 @@
 <?php
 // Initialize the session
 session_start();
+
+// Fonction pour vérifier si l'utilisateur est administrateur
+function estAdmin() {
+    return isset($_SESSION['Admin']) && $_SESSION['Admin'] === true;
+}
  
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
+
 ?>
+
+
  
 <?php
 // Pour la table inscrit dans la bdd bdinscrit
@@ -23,6 +31,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("La connexion a échoué : " . $conn->connect_error);
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -30,24 +40,48 @@ if ($conn->connect_error) {
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" -->
     <link rel="stylesheet" href="Welcome.css">
 </head>
 <body>
 
+<style>
+
+/* Style pour le menu visible uniquement pour l'administrateur */
+.admin-sidebar {
+display: none;
+}
+
+</style>
+
+
+
 <div class="sidebar">
         <a href="#" class="active">Accueil</a>
         <a href="logout.php" class="">Se déconnecter</a>
-        <a href="reset-password.php" class="">Changer le mot de passe</a> <!-- FAIRE CONDITION VISIBLE QUE POUR ADMIN avec du js ou php-->
-        <a href="register.php" class="">Enregistrer un nouveau compte </a> <!-- FAIRE CONDITION VISIBLE QUE POUR ADMIN avec du js ou php-->
-    </div>
+        <?php if (estAdmin()) { ?>
+            <a href="register.php" class="admin-menu">Enregistrer un nouveau compte </a> 
+            <a href="reset-password.php" class="admin-menu">Changer le mot de passe</a>
+        <?php } ?> <!-- FAIRE CONDITION VISIBLE QUE POUR ADMIN avec du js ou php-->
+</div>
+
+
+<script>
+        // Vérifier le rôle de l'utilisateur en JavaScript
+        var estAdmin = <?php echo $estAdmin ? 'true' : 'false'; ?>;
+        if (estAdmin) {
+            // Afficher le menu réservé à l'administrateur
+            var adminMenuItems = document.getElementsByClassName('sidebar');
+            for (var i = 0; i < adminMenuItems.length; i++) {
+                adminMenuItems[i].style.display = 'block';
+            }
+        }
+</script>
 
     <div class="content">
     <h1 class="my-5">Bonjour, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
 
 
     <h2>Liste des inscrits</h2>
-
     <button class="add-button">Ajouter</button>
 
     <div class="add-form">
