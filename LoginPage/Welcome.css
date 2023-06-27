@@ -165,3 +165,8 @@ body {
     padding: 20px;
 }
 
+
+/* Style pour le menu visible uniquement pour l'administrateur */
+.admin-sidebar {
+    display: none;
+}

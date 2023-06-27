@@ -17,7 +17,7 @@ $username_err = $password_err = $login_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
+
     // Check if username is empty
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter username.";
@@ -35,17 +35,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT id, username, password FROM users WHERE username = :username";
-        
+        $sql = "SELECT id, username, password, isAdmin FROM users WHERE username = :username";
+
         if($stmt = $pdo->prepare($sql)){
             // Bind variables to the prepared statement as parameters
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
             
             // Set parameters
             $param_username = trim($_POST["username"]);
-            
+            $result = $stmt->execute();
             // Attempt to execute the prepared statement
-            if($stmt->execute()){
+            if($result){
                 // Check if username exists, if yes then verify password
                 if($stmt->rowCount() == 1){
                     if($row = $stmt->fetch()){
@@ -54,7 +54,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         $hashed_password = $row["password"];
                         if(password_verify($password, $hashed_password)){
                             // Password is correct, so start a new session
-                            session_start();
+
+                            if($row["isAdmin"]) {
+                                $_SESSION["isAdmin"] = true;
+                            }
                             
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
@@ -108,6 +111,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }        
         ?>
 
+        <!-- action not required when php it's in the same file  -->
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group">
                 <label>Nom d'utilisateur</label>

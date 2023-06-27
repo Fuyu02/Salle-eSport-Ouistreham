@@ -1,8 +1,8 @@
 <?php
 // Vérifier si l'ID est passé en paramètre
-if (isset($_POST['id'])){
+if (isset($_GET['id'])){
     // Récupérer l'ID de la ligne à modifier
-    $id = $_POST['id'];
+    $id = $_GET['id'];
 
 
     // Vérifier si le formulaire de modification a été soumis
@@ -177,3 +177,6 @@ if (isset($_POST['id'])){
 </body>
 
 </html>
+
+<?php $stmt->close();
+    $conn->close();?>

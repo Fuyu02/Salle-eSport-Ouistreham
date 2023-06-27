@@ -2,9 +2,9 @@
 
 <?php
 // Vérifier si l'ID est passé en paramètre
-if (isset($_POST['id'])) {
+if (isset($_GET['id'])) {
     // Récupérer l'ID de la ligne à supprimer
-    $id = $_POST['id'];
+    $id = $_GET['id'];
 
     // Vérifier si le formulaire de suppression a été soumis
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
