@@ -24,24 +24,26 @@
 
 
     <header>
-    <nav class="menu">
-        <a href="Site_pavillon_eSport.php" alt="Logo Mairie de Ouistreham"><img src="images/logo-ORB-quadri.png"/></a>
-        <div class="connexion">
-            <button type="button" id="login-button" class="boutonlogin" onclick="ClickLogin()">Se connecter</button>
-        </div>
-            <!--bandeau avec image (en trouver une autre) et faire redirection vers le site de la mairie de ousitreham -->
+        <div>
+            <div class="connexion">
+                <button type="button" id="login-button" class="boutonlogin" onclick="ClickLogin()">Se connecter</button>
+            </div>
+            <nav class="menu">
+                <a href="Site_pavillon_eSport.php" alt="Logo Mairie de Ouistreham"><img src="images/logo-ORB-quadri.png"/></a>
             <!--menu déroulant faire en sorte même hauter que l'image -->
-            <ul>
-                <li class="mderoulant"> <a href="">Présentation</a>
-                    <ul class="sous">
-                        <li> <a href="Salle-eSport.php">La salle eSport</a> </li>
-                        <li> <a href="Articles.php">Actualité</a> </li>
-                    </ul>
-                </li>
-                <li> <a href="Horaire-Inscription.php">Horaire et inscription</a></li>
-                <li> <a href="NousContacter.php">Nous Contacter</a></li>
-            </ul>
-        </nav> 
+            <!--utilisation de liste -->
+                <ul>
+                    <li class="mderoulant"> <a href="">Présentation</a>
+                        <ul class="sous">
+                            <li> <a href="Salle-eSport.php">La salle eSport</a> </li>
+                            <li> <a href="Articles.php">Actualité</a> </li>
+                        </ul>
+                    </li>
+                    <li> <a href="Horaire-Inscription.php">Horaire et inscription</a></li>
+                    <li> <a href="NousContacter.php">Nous Contacter</a></li>
+                </ul>
+            </nav> 
+        </div>
     </header>
 
 
@@ -175,8 +177,8 @@
         <!-- bas de page classique de site web -->
         <div class="colonnefooter">
                 <div id="colonne1">
-                    <a href="Salle-eSport.php">Présentation</a> <br><br>
-                    <a href="Horaire-Inscription.php">Horaire & Inscription</a> <br><br>
+                    <a href="Salle-eSport.php" class="lienfooter">Présentation</a> <br><br>
+                    <a href="Horaire-Inscription.php" class="lienfooter">Horaire & Inscription</a> <br><br>
                     <h4 style="color:orange;">Nous suivre :</h4>
                     <a href="https://www.facebook.com/lepavillonorb/"><img src="images/facebookicone.png" style="width:30px;height:30px"/></a>
                     <a href="https://twitter.com/OuistrehamRB"><img src="images/twittericone.png" style="width:30px;height:30px"/></a>

@@ -19,29 +19,31 @@
 
 
     <header>
-    <nav class="menu">
-        <a href="Site_pavillon_eSport.php" alt="Logo Mairie de Ouistreham"><img src="images/logo-ORB-quadri.png"/></a>
-        <div class="connexion">
-            <button type="button" id="login-button" class="boutonlogin" onclick="ClickLogin()">Se connecter</button>
+        <div>
+            <div class="connexion">
+                <button type="button" id="login-button" class="boutonlogin" onclick="ClickLogin()">Se connecter</button>
+            </div>
+            <nav class="menu">
+                <a href="Site_pavillon_eSport.php" alt="Logo Mairie de Ouistreham"><img src="images/logo-ORB-quadri.png"/></a>
+            <!--menu déroulant faire en sorte même hauter que l'image -->
+            <!--utilisation de liste -->
+                <ul>
+                    <li class="mderoulant"> <a href="">Présentation</a>
+                        <ul class="sous">
+                            <li> <a href="Salle-eSport.php">La salle eSport</a> </li>
+                            <li> <a href="Articles.php">Actualité</a> </li>
+                        </ul>
+                    </li>
+                    <li> <a href="Horaire-Inscription.php">Horaire et inscription</a></li>
+                    <li> <a href="NousContacter.php">Nous Contacter</a></li>
+                </ul>
+            </nav> 
         </div>
-            <!--bandeau avec image (en trouver une autre) et faire redirection vers le site lui même -->
-            <!--menu déroulant faire en sorte même hauteur que l'image -->
-            <ul>
-                <li class="mderoulant"> <a href="">Présentation</a>
-                    <ul class="sous">
-                        <li> <a href="Salle-eSport.php">La salle eSport</a> </li>
-                        <li> <a href="Articles.php">Actualité</a> </li>
-                    </ul>
-                </li>
-                <li> <a href="Horaire-Inscription.php">Horaire et inscription</a></li>
-                <li> <a href="NousContacter.php">Nous Contacter</a></li>
-            </ul>
-        </nav> 
     </header>
 
 
 
-    <body>
+    <body class="bodybleu">
         <div id="Presentation">
             </br>
             </br>

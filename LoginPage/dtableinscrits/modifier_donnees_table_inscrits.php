@@ -12,7 +12,7 @@ if (isset($_GET['id'])){
     $nouveauNom = $_POST["Nom"];
     $nouveauPrenom= $_POST["Prenom"];
     $nouveauAge=$_POST["Age"];
-    $nouvelEmail= $_POST["Email"]; //ERREUR ICI CLE DE TABLEAU NON DEFINIE
+    $nouvelEmail= $_POST["Email"]; 
     $nouveauGroupe=$_POST["Groupe"];
     $nouveauPeutJouerPEGI16=$_POST["PeutJouerPEGI16"];
 
@@ -35,7 +35,7 @@ if (isset($_GET['id'])){
     
     // Préparer et exécuter la requête préparée
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssisssi", $nouveauNom,$nouveauPrenom,$nouveauAge, $nouvelEmail,$nouveauGroupe,$nouveauPeutJouerPEGI16, $id);
+    $stmt->bind_param("ssisssi", $nouveauNom,$nouveauPrenom,$nouveauAge, $nouvelEmail,$nouveauGroupe,$nouveauPeutJouerPEGI16, $id); //ERREUR
     $stmt->execute();
 
     // Vérifier si la modification a réussi
@@ -178,5 +178,3 @@ if (isset($_GET['id'])){
 
 </html>
 
-<?php $stmt->close();
-    $conn->close();?>

@@ -1,6 +1,3 @@
-
-
-
 header{
     color: white;
 }
@@ -9,11 +6,13 @@ header{
 body{
     /*faire un dégradé de couleur*/
     /*color: #bbc6dc;*/
-    background-color: #bdd4e7;
-    background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
     font-family: 'Diphylleia', serif;
 }
 
+.bodybleu{
+    background-color: #bdd4e7;
+    background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
+}
 
 
 /**/
@@ -119,8 +118,10 @@ nav > ul li:hover .sous{
 	text-shadow: none;
 }
 
-
-
+/*Bouton connexion à droite*/
+.connexion{
+    text-align:right;
+  }
 
 
 /**/

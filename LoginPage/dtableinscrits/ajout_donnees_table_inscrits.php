@@ -29,7 +29,7 @@ $PeutJouerPEGI16 = $_POST["PeutJouerPEGI16"];
 // Insérez les données dans la table
 $sql = "INSERT INTO inscrits (id, Nom ,Prenom ,Age ,Email ,Groupe ,PeutJouerPEGI16) VALUES ('$id','$Nom', '$Prenom', '$Age','$Email','$Groupe','$PeutJouerPEGI16')";
 
-if ($conn->query($sql) === TRUE) {      //ERREUR SUR LA LIGNE
+if ($conn->query($sql) === TRUE) { 
     echo "Nouvel enregistrement créé avec succès.";
 } 
 else {
