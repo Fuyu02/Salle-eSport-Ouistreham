@@ -5,10 +5,7 @@ addButton.addEventListener('click', () => {
 addForm.style.display = 'block';
 });
 
-const test = (value) => {
-    console.log(value);
-    window.location.replace("https://www.youtube.com/")
-}
+
 
 function editData(id) {
     // Rediriger vers la page de modification avec l'ID de la ligne sélectionnée
@@ -36,7 +33,7 @@ links.forEach(function(link) {
     });
 });
 
-// Filtre pour ne pas envoyer le fomulaire d'ajout vide
+// Filtre pour ne pas envoyer le fomulaire d'ajout si il est vide
 
 function validateForm() {
         // Récupérer les valeurs des champs
@@ -54,7 +51,7 @@ function validateForm() {
             return false; // Empêcher l'envoi du formulaire
         }
 
-        // on peut ajouter d'autres vérifications après si on veut
+        //on peut ajouter d'autres vérifications après si on veut
 
         return true; // Envoyer le formulaire si tout est valide
     }

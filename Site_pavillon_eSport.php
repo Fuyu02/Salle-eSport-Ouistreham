@@ -53,9 +53,9 @@
         <section class="hero">
             <div id=imgAcc>
                 <img src="images/img1.jpg" alt="slider" class="transparent" id="ImageAccueil"/>
-                <div >
-                <span class="button" onclick="ClickPresentation()">Présentation</span>
-                <span class="button" onclick="ClickHoIn()">Horaire & Inscription</span>
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                    <span class="button" onclick="ClickPresentation()">Présentation</span>
+                    <span class="button" onclick="ClickHoIn()">Horaire & Inscription</span>
                 </div>
             </div>
         </section>
