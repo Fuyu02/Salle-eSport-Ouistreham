@@ -44,16 +44,16 @@
     </header>
 
     <body class="bodyaccueil">
-        <!--image slide (trouver image salle) avec boutons redirigeant -->
+        <!--image slide avec boutons redirigeant -->
         <br/>
         <br/>
         <br/>
         <br/>
         <div id="contentAccueil">
-        <section class="hero">
+        <section class="imgacc">
             <div id=imgAcc>
-                <img src="images/img1.jpg" alt="slider" class="transparent" id="ImageAccueil"/>
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                <img src="images/img1.jpg" alt="slider" class="transparent" />
+                <div  id ="positionspan">
                     <span class="button" onclick="ClickPresentation()">Présentation</span>
                     <span class="button" onclick="ClickHoIn()">Horaire & Inscription</span>
                 </div>

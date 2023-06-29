@@ -46,12 +46,37 @@ function validateForm() {
         var peutJouerPEGI16 = document.getElementById("PeutJouerPEGI16").value;
 
         // Vérifier si les champs sont vides
-        if (id === "" || nom === "" || prenom === "" || age === "" || email === "" || groupe === "" || peutJouerPEGI16 === "") {
+        if (nom === "" || prenom === "" || age === "" || email === "" || groupe === "" || peutJouerPEGI16 === "") {
             alert("Veuillez remplir tous les champs du formulaire.");
             return false; // Empêcher l'envoi du formulaire
         }
 
+        // Vérifier que le champ "Nom" contient uniquement des lettres
+        if (!/^[A-Za-z]+$/.test(nom)) {
+        alert("Le champ 'Nom' doit contenir uniquement des lettres.");
+        return false; // Empêcher l'envoi du formulaire
+        }
+        
+        // Vérifier que le champ "Prénom" contient uniquement des lettres
+        if (!/^[A-Za-z]+$/.test(prenom)) {
+        alert("Le champ 'Prénom' doit contenir uniquement des lettres.");
+        return false; // Empêcher l'envoi du formulaire
+        }
+        
+        // Vérifier que le champ "Âge" contient uniquement des chiffres
+        if (!/^\d+$/.test(age)) {
+        alert("Le champ 'Âge' doit contenir uniquement des chiffres.");
+        return false; // Empêcher l'envoi du formulaire
+        }
+        
+        // Vérifier que le champ "Email" contient un "@"
+        if (email.indexOf("@") === -1) {
+        alert("Le champ 'Email' doit contenir un '@'.");
+        return false; // Empêcher l'envoi du formulaire
+                }
+
         //on peut ajouter d'autres vérifications après si on veut
+
 
         return true; // Envoyer le formulaire si tout est valide
     }

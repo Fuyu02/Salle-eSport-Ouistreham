@@ -48,16 +48,10 @@
 /**/
 
 
-/*IMAGE ACCUEIL*/
-
-.imgAcc{
-    position: absolute;
-    display: inline-block;
-}
 
 /*IMAGE ACCUEIL*/
 
-.hero {
+.imgacc {
     position: relative;
     height: auto;
     width: auto; /* Ajustez la largeur selon vos besoins */
@@ -71,17 +65,13 @@
     
   }
 
-  .TxtImageAccueil {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 24px;
-    text-align: center;
-  }
-/**/
 
+
+/*Position des spans sur l'image*/
+
+#positionspan{
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
 
 
 
