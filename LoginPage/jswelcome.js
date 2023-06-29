@@ -17,12 +17,12 @@ function editData(id) {
 
 function confirmDelete(id) { 
     
-    if (confirm("Êtes-vous sûr de vouloir supprimer cette donnée ?")) {
-        // Supprimer la donnée en utilisant PHP et SQL
+    
+        // Supprimer la donnée selectionné
         window .location.href = "dtableinscrits/supprimer_donnees_table_inscrits.php?id=" + id;
         // Actualiser la page après la suppression
         //window.location.reload();
-    }
+    
 }
 
 // Ajoute la classe "active" au lien cliqué pour le menu sur le coté
@@ -36,5 +36,26 @@ links.forEach(function(link) {
     });
 });
 
+// Filtre pour ne pas envoyer le fomulaire d'ajout vide
 
+function validateForm() {
+        // Récupérer les valeurs des champs
+        var id = document.getElementById("id").value;
+        var nom = document.getElementById("Nom").value;
+        var prenom = document.getElementById("Prenom").value;
+        var age = document.getElementById("Age").value;
+        var email = document.getElementById("Email").value;
+        var groupe = document.getElementById("Groupe").value;
+        var peutJouerPEGI16 = document.getElementById("PeutJouerPEGI16").value;
+
+        // Vérifier si les champs sont vides
+        if (id === "" || nom === "" || prenom === "" || age === "" || email === "" || groupe === "" || peutJouerPEGI16 === "") {
+            alert("Veuillez remplir tous les champs du formulaire.");
+            return false; // Empêcher l'envoi du formulaire
+        }
+
+        // on peut ajouter d'autres vérifications après si on veut
+
+        return true; // Envoyer le formulaire si tout est valide
+    }
 

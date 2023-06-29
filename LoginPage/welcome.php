@@ -76,7 +76,7 @@ if ($conn->connect_error) {
 
     <div class="add-form">
         <h3>Ajouter un/une inscrit</h3>
-            <form action="dtableinscrits/ajout_donnees_table_inscrits.php" method="post">
+            <form action="dtableinscrits/ajout_donnees_table_inscrits.php" method="post" onsubmit="return validateForm()">
                 <label for="id">id :</label>
                 <input type="text" id="id" name="id">
                 <label for="Nom">Nom :</label>
