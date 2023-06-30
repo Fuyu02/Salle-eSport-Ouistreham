@@ -72,6 +72,10 @@ if ($conn->connect_error) {
 
 
     <h2>Liste des inscrits</h2>
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Rechercher par nom ou prénom">
+        <button type="button" onclick="searchData()">Rechercher</button>
+    </div>
     <button class="add-button">Ajouter</button>
 
     <div class="add-form">

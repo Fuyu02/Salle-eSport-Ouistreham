@@ -41,8 +41,37 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
 /**/
+
+/*Pour la barre de recherche*/
+.search-bar {
+    margin-bottom: 20px;
+}
+
+#search-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-input:focus {
+    outline: none;
+}
+
+button[type="button"] {
+    padding: 8px 12px;
+    background-color: #ffa500;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="button"]:hover {
+    background-color: #ff7f00;
+}
+
+
 
 
 /* Style du bouton d'ajout */

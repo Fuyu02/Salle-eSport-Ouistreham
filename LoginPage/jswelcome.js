@@ -88,3 +88,19 @@ function validateForm() {
         return true; // Envoyer le formulaire si tout est valide
     }
 
+//pour la barre de recherche
+function searchData() {
+    var input = document.getElementById('search-input').value.toLowerCase();
+    var rows = document.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+    for (var i = 0; i < rows.length; i++) {
+        var name = rows[i].getElementsByTagName('td')[1].innerText.toLowerCase();
+        var surname = rows[i].getElementsByTagName('td')[2].innerText.toLowerCase();
+
+        if (name.includes(input) || surname.includes(input)) {
+            rows[i].style.display = '';
+        } else {
+            rows[i].style.display = 'none';
+        }
+    }
+}
