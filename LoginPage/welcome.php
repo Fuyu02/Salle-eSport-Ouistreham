@@ -78,7 +78,7 @@ if ($conn->connect_error) {
         <h3>Ajouter un/une inscrit</h3>
             <form action="dtableinscrits/ajout_donnees_table_inscrits.php" method="post" onsubmit="return validateForm()">
                 <label for="id">id :</label>
-                <input type="text" id="id" name="id">
+                <input type="text" id="id" name="id" readonly>
                 <label for="Nom">Nom :</label>
                 <input type="text" id="Nom" name="Nom">
                 <label for="Nom">Prenom :</label>
@@ -121,13 +121,14 @@ if ($conn->connect_error) {
         while ($row = $result->fetch_assoc()) {
             // Affichez les données
             echo "<tr>";
-            echo "<td>" . $row["id"] .  "</td>";
+            echo "<td>" . $row["id"] .  "</td>"; 
             echo "<td>" . $row["Nom"] . "</td>";
             echo "<td>" . $row["Prenom"] . "</td>";
             echo "<td>" . $row["Age"] . "</td>";
             echo "<td>" . $row["Email"] . "</td>";
             echo "<td>" . $row["Groupe"] . "</td>";
-            echo "<td>" . $row["PeutJouerPEGI16"] . "</td>";
+            echo "<td>" . ($row["PeutJouerPEGI16"] == 1 ? "Oui" : "Non") . "</td>";
+            //echo "<td>" . $row["PeutJouerPEGI16"] . "</td>";
             echo "<td><button class='edit-button' onclick='editData(" .  $row["id"] . ")'>Modifier</button></td>";
             echo "<td><button class='delete-button' onclick='confirmDelete(" . $row["id"] . ")'>Supprimer</button></td>";
             echo "</tr>";

@@ -115,6 +115,7 @@ if (isset($_GET['id'])) {
 
     <p>Êtes-vous sûr de vouloir supprimer les données suivantes :</p>
     <p>Nom : <?php echo $Nom; ?></p>
+    <p>Prenom : <?php echo $Prenom; ?></p>
     <p>Email : <?php echo $Email; ?></p>
 
     <form method="POST">

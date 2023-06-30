@@ -73,7 +73,14 @@ function validateForm() {
         if (email.indexOf("@") === -1) {
         alert("Le champ 'Email' doit contenir un '@'.");
         return false; // Empêcher l'envoi du formulaire
-                }
+        }
+
+        //Vérifier que le champ "peutJouerPEGI16 contient oui ou non uniquement"
+         // Vérifier que le champ "PeutJouerPEGI16" contient uniquement "oui" ou "non"
+         if (peutJouerPEGI16 !== "oui" && peutJouerPEGI16 !== "Oui" && peutJouerPEGI16 !== "non"  && peutJouerPEGI16 !== "Non") {
+            alert("Le champ 'Peut Jouer aux jeux PEGI 16' doit être 'oui' ou 'non'.");
+            return false; // Empêcher l'envoi du formulaire
+        }
 
         //on peut ajouter d'autres vérifications après si on veut
 
